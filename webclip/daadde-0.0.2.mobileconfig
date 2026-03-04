@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>FullScreen</key>
+			<true/>
+			<key>Icon</key>
+			<data>iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAEO0lEQVR4AcyXXYhVVRTH/ycy7oTWzcARCx2awpFqFCxUSGxozpgW5ZNFSvYYPaRCUoES0Us9ZQT1WtFAH0QDFQX6YBlpaFCGKIIf6IP6NoL49XL9//a599xzvXPn7jt+XIf932udddZa+3/WXueePXeo87+SQ541Pjf2GKeNi0bFQB63/NH42Hja6Hh0SqrsFTYZ7xmvG0uN2QZELYTss7LGqPm9bB27RdzohFSN0NtODRklvfOUpOuUrN2sZP27Sta8oWTZ89L0e+0SBpXiASAWDDFTJ6R4+o1OWtZdpWzx9e9I65qR2JYMLrdrGAOe8wex3nbEkqJKGSGnTBYPZ2SGX5F65wqSNmcV6n9ccsUgmww8GcyeBgyIlSzbjlhSNPYisiX9g9JatwuLY2iFwafst7lOWCIH/dYqIrfHknopj6A69Qrk5gmVxc8ogVx2kyrRY9nVJHMsqVClkMcLBRkzufe07LmiZ3hBioaJ9FhSvPZZPD2UaXHzLPdc3bO3rrbWYknVM1y5XNc719jCtlGxpE7kmQ7vy9Uo5fj/RbczxYtWeiypvXmCvb/kalvl/DlV/mrw/71tjB1iSX1r30uGKvt3Sgd2o7bHHz9Ix/JKjTvgN6PtiCW1y5myhGdPqjL64eTErpj/zlFVxvzNRnewxxdGvQ180WrEkvIq+shJDhsm9GdGbOwz6R9XzkQFjroqXH+/XZWvTfzUkeDuiYf6xDJqxJIiGX0FMWROLFSNylXBdeU7n1ogSZQEofclRVVJ/uuElN31jScWGLMclxtZh/apsmM0w56fxbWyLYMEW4Y/xBwSN9qR4kPMrzmfB75dgN+a/5z+X4NttWgaNDX38SMHJwxy8IvOxxlbU1DN0IoURF6zE2ehifCi702a2Pf5+G6wnCgeG/nrXwo71sa1pFgIZ4LAJjsWnxKyRVA1uzQN8hT90KkUlebAR17yA2wNCYqkSFRzhkjftGklzby/T/P6lqj/kRV6bPCFKYN48pCvyoBKcqSGGLJqloqkILTRd3AORIbSLUpXbVW6eqtGjHT1NutTQxbvXM63fOhNzXlwoZcKgz6DWF6xGilKCyGqFaqRmsTQ8BY9seRVzV+wUg89vEJzHlg4ZRBPHvLxoCOrtoXqB1oSvQWxUBBIQQQDMhBIHUCCO7191aAbKnp6ynrUrZC6anPdGtXkVIx+DttXa0L13F0O21QobdX/5gj6bCh9S/RudYUNlrOp1EorYQwsGFGBebDd7IkdKRSB7VsKKSoV1qakQbmFE1WiYoUlF0GKJgu2Wb3zg5zKdD0x981sPDJDipKFnNNnRB2hg++NnGbc07Bu6Knw1rFIyW8F8lbjmnXLVCrnwP7mF11UGkh1kUfD0rc/qd27PlU3cPDAT60rtePXD9QN7P/7qyZS2T8DNl+8MK5uwcvXxgl6ijP0dltuF3x5FQAA//8ULrMUAAAABklEQVQDAHgF3H/zFcdIAAAAAElFTkSuQmCC</data>
+			<key>IgnoreManifestScope</key>
+			<true/>
+			<key>IsRemovable</key>
+			<true/>
+			<key>Label</key>
+			<string>shu</string>
+			<key>PayloadDescription</key>
+			<string>Configuration Payload description</string>
+			<key>PayloadDisplayName</key>
+			<string>PakePayload</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.webClip.managed.E0736409-C08F-4F54-86DA-F64F64548FAC</string>
+			<key>PayloadType</key>
+			<string>com.apple.webClip.managed</string>
+			<key>PayloadUUID</key>
+			<string>E0736409-C08F-4F54-86DA-F64F64548FAC</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>Precomposed</key>
+			<false/>
+			<key>URL</key>
+			<string>http://localhost:1420/edit</string>
+		</dict>
+	</array>
+	<key>PayloadDisplayName</key>
+	<string>PakePlus-iOS-daadde</string>
+	<key>PayloadIdentifier</key>
+	<string>com.pakeplus.ios.23014396-AA45-42E3-AB8D-F64F64548FAC</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>6E3BF4EB-11D9-4F2E-8DE8-F64F64548FAC</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
