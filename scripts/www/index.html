@@ -2,87 +2,617 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link rel="stylesheet" href="./static/css/styles.css" />
-        <meta
-            http-equiv="Content-Security-Policy"
-            content="default-src * 'unsafe-inline' 'unsafe-eval'"
-        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tauri App</title>
-        <script src="./static/js/main.js"></script>
-    </head>
-    <body>
-        <main class="container">
-            <h1>Welcome to TauriMan</h1>
+        <title>Premium Domain For Sale - PikeRobot.com</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+        />
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: '#165DFF',
+                            secondary: '#36CFC9',
+                            dark: '#1D2129',
+                            light: '#F2F3F5',
+                        },
+                        fontFamily: {
+                            inter: ['Inter', 'system-ui', 'sans-serif'],
+                        },
+                    },
+                },
+            }
+        </script>
+        <style type="text/tailwindcss">
+            @layer utilities {
+                .text-shadow {
+                    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                }
+                .text-gradient {
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                }
+                .transition-transform-opacity {
+                    transition-property: transform, opacity;
+                }
+            }
+        </style>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-            <div class="row">
-                <a
-                    href="https://tauri.app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <img
-                        src="./assets/tauri.svg"
-                        class="logo tauri"
-                        alt="Tauri logo"
-                    />
-                </a>
-                <a
-                    href="https://pakeplus.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <img
-                        src="https://hk.gh-proxy.org/https://github.com/Sjj1024/PakePlus/blob/main/app-icon.png"
-                        class="logo vanilla"
-                        alt="JavaScript logo"
-                    />
-                </a>
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                font-family: 'Inter', sans-serif;
+            }
+
+            .domain-card {
+                transition: all 0.3s ease;
+            }
+
+            .domain-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+
+            .feature-icon {
+                transition: all 0.3s ease;
+            }
+
+            .feature-item:hover .feature-icon {
+                transform: scale(1.1);
+                color: #165dff;
+            }
+
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .animate-fadeInUp {
+                animation: fadeInUp 0.6s ease forwards;
+            }
+
+            .delay-100 {
+                animation-delay: 0.1s;
+            }
+            .delay-200 {
+                animation-delay: 0.2s;
+            }
+            .delay-300 {
+                animation-delay: 0.3s;
+            }
+            .delay-400 {
+                animation-delay: 0.4s;
+            }
+            .delay-500 {
+                animation-delay: 0.5s;
+            }
+        </style>
+    </head>
+    <body class="bg-light text-dark antialiased">
+        <!-- Header Section -->
+        <header
+            class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800 text-white"
+        >
+            <div class="absolute inset-0 overflow-hidden">
+                <div
+                    class="absolute -top-40 -right-40 w-96 h-96 bg-primary/20 rounded-full filter blur-3xl"
+                ></div>
+                <div
+                    class="absolute -bottom-40 -left-40 w-96 h-96 bg-secondary/20 rounded-full filter blur-3xl"
+                ></div>
             </div>
-            <p>Click to get data</p>
-            <form class="row" id="greet-form">
-                <input id="greet-input" placeholder="Enter a name..." />
-                <button type="submit" id="getdata">GET DATA</button>
-            </form>
-            <div class="functions">
-                <a href="./book.html" target="_self">跳转到book.html</a>
-                <a
-                    href="https://www.baidu.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >跳到百度blank
-                </a>
-                <a
-                    href="https://www.baidu.com"
-                    target="_self"
-                    rel="noopener noreferrer"
+
+            <nav
+                class="fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 flex justify-between items-center transition-all duration-300"
+                id="navbar"
+            >
+                <div class="text-xl font-bold tracking-tight">
+                    <span class="text-white">Domain</span>
+                    <span class="text-primary">Broker</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a
+                        href="#about"
+                        class="hover:text-primary transition-colors"
+                        >About</a
+                    >
+                    <a
+                        href="#features"
+                        class="hover:text-primary transition-colors"
+                        >Features</a
+                    >
+                    <a
+                        href="#contact"
+                        class="hover:text-primary transition-colors"
+                        >Contact: 1024xiaoshen@gmail.com
+                    </a>
+                </div>
+                <button
+                    class="md:hidden text-white text-xl"
+                    id="mobile-menu-button"
                 >
-                    跳到百度self
-                </a>
-                <button onclick="sayHello()">点击我</button>
-                <button onclick="sayHello()">下载文件</button>
-                <button onclick="sayHello()">上传文件</button>
-                <button onclick="sayHello()">访问相机</button>
-                <button onclick="sayHello()">访问麦克风</button>
-                <button onclick="sayHello()">访问相册</button>
-                <button class="btn" onclick="openWechat()">打开微信</button>
-                <button class="btn" onclick="openWechatScan()">
-                    打开扫一扫
+                    <i class="fa fa-bars"></i>
                 </button>
-                <button class="btn" onclick="openZhihu()">打开知乎</button>
-                <button onclick="sayHello()">打开抖音</button>
-                <button onclick="sayHello()">用浏览器打开</button>
-                <button>打开知乎</button>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <div
+                class="fixed inset-0 bg-dark/95 z-40 flex flex-col items-center justify-center space-y-8 text-xl transform translate-x-full transition-transform duration-300"
+                id="mobile-menu"
+            >
+                <button
+                    class="absolute top-6 right-6 text-white text-xl"
+                    id="close-menu-button"
+                >
+                    <i class="fa fa-times"></i>
+                </button>
+                <a href="#about" class="hover:text-primary transition-colors"
+                    >About</a
+                >
+                <a href="#features" class="hover:text-primary transition-colors"
+                    >Features</a
+                >
+                <a href="#contact" class="hover:text-primary transition-colors"
+                    >Contact</a
+                >
+                <a
+                    href="#contact"
+                    class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full transition-all"
+                    >Make Offer</a
+                >
             </div>
-            <p id="greet-msg"></p>
-            <img src="./static/image/cursor.jpeg" alt="logo" />
-            <video
-                src="https://hk.gh-proxy.org/https://github.com/Sjj1024/PakePlus/blob/main/docs/static/videos/pakeplus.mp4"
-                autoplay
-                controls
-                style="width: 100%; height: 100%"
-            ></video>
-            <audio src="./static/music/yin.mp3" controls></audio>
-        </main>
+
+            <div class="container mx-auto px-6 md:px-12 z-10 text-center">
+                <div class="opacity-0 animate-fadeInUp">
+                    <span
+                        class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6"
+                        >Premium Domain For Sale</span
+                    >
+                </div>
+                <h1
+                    class="text-[clamp(2.5rem,8vw,5rem)] font-extrabold leading-none mb-6 opacity-0 animate-fadeInUp delay-100"
+                >
+                    <span
+                        class="bg-gradient-to-r from-primary to-secondary text-gradient"
+                        >PikeRobot.com</span
+                    >
+                </h1>
+                <p
+                    class="text-[clamp(1rem,3vw,1.25rem)] text-gray-300 max-w-2xl mx-auto mb-10 opacity-0 animate-fadeInUp delay-200"
+                >
+                    A premium domain name perfect for robotics, AI, and
+                    technology startups looking to establish a strong online
+                    presence.
+                </p>
+                <div
+                    class="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-fadeInUp delay-300"
+                >
+                    <a
+                        href="#contact"
+                        class="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full text-lg font-medium transition-all transform hover:scale-105"
+                    >
+                        Inquire About This Domain
+                    </a>
+                    <a
+                        href="#features"
+                        class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-full text-lg font-medium transition-all border border-white/20"
+                    >
+                        Learn More <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="mt-20 flex justify-center opacity-0 animate-fadeInUp delay-400"
+                >
+                    <a
+                        href="#about"
+                        class="text-white/70 hover:text-white animate-bounce block"
+                    >
+                        <i class="fa fa-angle-down text-3xl"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="text-primary font-semibold"
+                        >ABOUT THIS DOMAIN</span
+                    >
+                    <h2
+                        class="text-[clamp(1.8rem,5vw,3rem)] font-bold mt-2 mb-6"
+                    >
+                        Why PikeRobot.com is a valuable asset
+                    </h2>
+                    <p class="text-gray-600 text-lg">
+                        This premium domain offers a unique combination of
+                        memorability, brandability, and industry relevance that
+                        can significantly enhance your online presence.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <h3 class="text-2xl font-bold mb-4">
+                            Perfect for robotics and AI ventures
+                        </h3>
+                        <p class="text-gray-600 mb-6">
+                            PikeRobot.com combines "Pike" - evoking speed,
+                            precision, and cutting-edge technology - with
+                            "Robot" to create a domain that's instantly
+                            recognizable and relevant to the robotics,
+                            automation, and AI industries.
+                        </p>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start">
+                                <div
+                                    class="bg-primary/10 p-2 rounded-full text-primary mr-4 mt-1"
+                                >
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">
+                                        Short & Memorable
+                                    </h4>
+                                    <p class="text-gray-600">
+                                        Easy to remember and type, reducing user
+                                        error and increasing direct traffic.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="bg-primary/10 p-2 rounded-full text-primary mr-4 mt-1"
+                                >
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Brandable</h4>
+                                    <p class="text-gray-600">
+                                        Provides a strong foundation for
+                                        building a recognizable brand identity.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="bg-primary/10 p-2 rounded-full text-primary mr-4 mt-1"
+                                >
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">
+                                        Industry Relevant
+                                    </h4>
+                                    <p class="text-gray-600">
+                                        Clearly communicates your focus on
+                                        robotics and AI technologies.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a
+                            href="#contact"
+                            class="inline-flex items-center text-primary font-semibold hover:text-primary/80 transition-colors"
+                        >
+                            Get this domain for your business
+                            <i class="fa fa-long-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <div class="order-1 md:order-2 relative">
+                        <div
+                            class="absolute -top-6 -left-6 w-24 h-24 bg-primary/10 rounded-lg -z-10"
+                        ></div>
+                        <div
+                            class="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary/10 rounded-lg -z-10"
+                        ></div>
+                        <img
+                            src="https://picsum.photos/id/1/600/400"
+                            alt="Robotics technology concept"
+                            class="w-full h-auto rounded-lg shadow-xl"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Domain Features Section -->
+        <section id="features" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="text-primary font-semibold"
+                        >DOMAIN BENEFITS</span
+                    >
+                    <h2
+                        class="text-[clamp(1.8rem,5vw,3rem)] font-bold mt-2 mb-6"
+                    >
+                        Why this domain stands out
+                    </h2>
+                    <p class="text-gray-600 text-lg">
+                        Investing in a premium domain can provide significant
+                        advantages for your business growth and online
+                        visibility.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-md feature-item">
+                        <div class="feature-icon text-primary text-3xl mb-6">
+                            <i class="fa fa-bolt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">
+                            Instant Credibility
+                        </h3>
+                        <p class="text-gray-600">
+                            A premium domain like PikeRobot.com immediately
+                            establishes trust and authority in the robotics and
+                            AI space.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-md feature-item">
+                        <div class="feature-icon text-primary text-3xl mb-6">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">SEO Advantage</h3>
+                        <p class="text-gray-600">
+                            Contains relevant keywords that can improve search
+                            engine rankings for robotics and AI related queries.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-md feature-item">
+                        <div class="feature-icon text-primary text-3xl mb-6">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">
+                            Brand Recognition
+                        </h3>
+                        <p class="text-gray-600">
+                            Easy to remember and share, helping you build a
+                            strong brand identity in the competitive tech
+                            market.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-md feature-item">
+                        <div class="feature-icon text-primary text-3xl mb-6">
+                            <i class="fa fa-line-chart"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Investment Value</h3>
+                        <p class="text-gray-600">
+                            Premium domains tend to appreciate in value, making
+                            this a smart investment for the future.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-md feature-item">
+                        <div class="feature-icon text-primary text-3xl mb-6">
+                            <i class="fa fa-globe"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Global Appeal</h3>
+                        <p class="text-gray-600">
+                            Has international appeal, perfect for companies
+                            looking to expand their reach beyond local markets.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-md feature-item">
+                        <div class="feature-icon text-primary text-3xl mb-6">
+                            <i class="fa fa-shield"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">
+                            Trademark Protection
+                        </h3>
+                        <p class="text-gray-600">
+                            Unique enough to provide strong trademark protection
+                            for your brand identity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Similar Sales Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="text-primary font-semibold"
+                        >MARKET CONTEXT</span
+                    >
+                    <h2
+                        class="text-[clamp(1.8rem,5vw,3rem)] font-bold mt-2 mb-6"
+                    >
+                        Recent Domain Sales
+                    </h2>
+                    <p class="text-gray-600 text-lg">
+                        Get an idea of the market value for similar premium
+                        domains in the tech space.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div
+                        class="domain-card bg-gray-50 p-6 rounded-xl border border-gray-100"
+                    >
+                        <div class="text-sm text-gray-500 mb-2">
+                            Robotics Domain
+                        </div>
+                        <div class="font-bold text-xl mb-4">AutoBot.com</div>
+                        <div class="text-primary font-bold text-2xl mb-2">
+                            $125,000
+                        </div>
+                        <div class="text-sm text-gray-500">Sold May 2023</div>
+                    </div>
+
+                    <div
+                        class="domain-card bg-gray-50 p-6 rounded-xl border border-gray-100"
+                    >
+                        <div class="text-sm text-gray-500 mb-2">
+                            AI Technology
+                        </div>
+                        <div class="font-bold text-xl mb-4">SmartAI.io</div>
+                        <div class="text-primary font-bold text-2xl mb-2">
+                            $89,000
+                        </div>
+                        <div class="text-sm text-gray-500">Sold Jan 2023</div>
+                    </div>
+
+                    <div
+                        class="domain-card bg-gray-50 p-6 rounded-xl border border-gray-100"
+                    >
+                        <div class="text-sm text-gray-500 mb-2">
+                            Tech Innovation
+                        </div>
+                        <div class="font-bold text-xl mb-4">NexTech.ai</div>
+                        <div class="text-primary font-bold text-2xl mb-2">
+                            $110,000
+                        </div>
+                        <div class="text-sm text-gray-500">Sold Mar 2023</div>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        These recent sales demonstrate the significant value
+                        that premium tech and robotics related domains can hold
+                        in today's market.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-12">
+            <div class="container mx-auto px-6 md:px-12">
+                Contact: 1024xiaoshen@gmail.com
+            </div>
+        </footer>
+
+        <script>
+            // Mobile menu functionality
+            const mobileMenuButton =
+                document.getElementById('mobile-menu-button')
+            const closeMenuButton = document.getElementById('close-menu-button')
+            const mobileMenu = document.getElementById('mobile-menu')
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a')
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.remove('translate-x-full')
+            })
+
+            closeMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full')
+            })
+
+            mobileMenuLinks.forEach((link) => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('translate-x-full')
+                })
+            })
+
+            // Navbar scroll effect
+            const navbar = document.getElementById('navbar')
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add(
+                        'bg-dark/90',
+                        'backdrop-blur-md',
+                        'shadow-lg'
+                    )
+                    navbar.classList.remove('py-4')
+                    navbar.classList.add('py-3')
+                } else {
+                    navbar.classList.remove(
+                        'bg-dark/90',
+                        'backdrop-blur-md',
+                        'shadow-lg'
+                    )
+                    navbar.classList.remove('py-3')
+                    navbar.classList.add('py-4')
+                }
+            })
+
+            // Form submission handling
+            const contactForm = document.querySelector('form')
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault()
+
+                // In a real implementation, you would send the form data to a server
+                // For this demo, we'll just show a success message
+                const submitButton = contactForm.querySelector(
+                    'button[type="submit"]'
+                )
+                const originalText = submitButton.innerHTML
+
+                submitButton.disabled = true
+                submitButton.innerHTML =
+                    '<i class="fa fa-spinner fa-spin mr-2"></i> Sending...'
+
+                setTimeout(() => {
+                    submitButton.innerHTML =
+                        '<i class="fa fa-check mr-2"></i> Message Sent!'
+                    submitButton.classList.remove('bg-primary')
+                    submitButton.classList.add('bg-green-600')
+
+                    // Reset form
+                    contactForm.reset()
+
+                    // Restore button after delay
+                    setTimeout(() => {
+                        submitButton.innerHTML = originalText
+                        submitButton.disabled = false
+                        submitButton.classList.remove('bg-green-600')
+                        submitButton.classList.add('bg-primary')
+                    }, 3000)
+                }, 1500)
+            })
+
+            // Intersection Observer for animation on scroll
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1,
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fadeInUp')
+                        observer.unobserve(entry.target)
+                    }
+                })
+            }, observerOptions)
+
+            // Observe all sections for animation
+            document
+                .querySelectorAll('section > div > div:not(.text-center)')
+                .forEach((el) => {
+                    el.style.opacity = '0'
+                    observer.observe(el)
+                })
+        </script>
     </body>
 </html>
